@@ -1,4 +1,4 @@
-# Import libraries
+#### Import libraries ####
 import speech_recognition as sr
 from gtts import gTTS
 import playsound
@@ -6,9 +6,9 @@ import translators as ts
 import os 
 
 
-# Main Logic
+#### Text to Speech / Speech to Text ####
 
-## Convert english speech into test
+## Convert english speech into text
 def mily_listen_en():
 
     r = sr.Recognizer()
@@ -25,7 +25,7 @@ def mily_listen_en():
 
     return text
 
-## Convert spanish speech into test
+## Convert spanish speech into text
 def mily_listen_es():
 
     r = sr.Recognizer()
@@ -42,7 +42,7 @@ def mily_listen_es():
 
     return text  
 
-# Concert english text to speech
+## Convert english text to speech
 def mily_talk_en(text):
 
     # create audio file
@@ -59,7 +59,7 @@ def mily_talk_en(text):
     os.remove(file_name)
 
 
-# Concert spanish text to speech
+## Convert spanish text to speech
 def mily_talk_es(text):
 
     # create audio file
@@ -76,7 +76,7 @@ def mily_talk_es(text):
     os.remove(file_name)
 
 
-# Translation functions
+#### Translation functions ####
 ## Spanish to English
 def translator_es_en(text):
 
@@ -133,7 +133,7 @@ def mily_reply(text):
 
 # Code run
 def mily_run():
-    mily_talk_en('Hi, I am Mily. What is your name?')
+    mily_talk_en('Hi, I am Milagros. What is your name?')
     listen_name = mily_listen_en()
     mily_talk_en('Hi' + listen_name + ', how can I help you?')
 
