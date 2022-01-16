@@ -1,4 +1,4 @@
-# English - Spanish Translator
+# Translator App
 
 ## Disclaimer
 
